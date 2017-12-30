@@ -48,9 +48,11 @@ function styles() {
 function scripts() {
     return gulp.src(paths.src + "js/**/*.js")
         .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify())
         .pipe(concat("scripts.min.js"))
+        .pipe(sourcemaps.write("/"))
         .pipe(gulp.dest(paths.build + "js/"));
 }
 
