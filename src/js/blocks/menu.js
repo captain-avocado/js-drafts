@@ -1,4 +1,2 @@
-function plus (a) {
-    return a + 10;
-}
-console.log(plus(10));
+let one = 4;
+let second = 2;
